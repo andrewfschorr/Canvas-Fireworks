@@ -1,4 +1,4 @@
 Canvas-Fireworks
 ================
 
-Firework Simulator - First HTML5 Canvas experiment 
+"Pixelated Fireworks" - A HTML5 Canvas experiment 
