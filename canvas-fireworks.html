@@ -3,75 +3,13 @@
     <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>AFS35MM | Canvas Fireworks</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
 	<style>
 		/**
 			MINIFIED FOR PROD
 			html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}body{font-family:arial;font-size:12px}*{overflow:hidden}#controls{position:absolute;top:0;left:0;padding:20px;-webkit-border-bottom-right-radius:3px;-moz-border-radius-bottomright:3px;border-bottom-right-radius:3px;background-image:url('http://afs35mm.com/background.png')}p{color:white;padding:10px 2px;font-weight:600}p#disclaimer{font-family:georgia;font-style:italic;text-align:center;margin-top:10px;font-weight:200}input[type='range']{-webkit-appearance:none;background-color:#000;height:20px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;color:#fff}input[type='range']::-webkit-slider-thumb{color:#fff;-webkit-appearance:none;background-color:#11f1ff;width:6px;height:20px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background:#1e5799;background:-moz-linear-gradient(top,#1e5799 0,#11f1ff 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#1e5799),color-stop(100%,#11f1ff));background:-webkit-linear-gradient(top,#1e5799 0,#11f1ff 100%);background:-o-linear-gradient(top,#1e5799 0,#11f1ff 100%);background:-ms-linear-gradient(top,#1e5799 0,#11f1ff 100%);background:linear-gradient(to bottom,#1e5799 0,#11f1ff 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e5799',endColorstr='#11f1ff',GradientType=0)}h1.about{position:absolute;right:0;bottom:0;padding:10px;background-image:url('http://afs35mm.com/background.png');color:white;-webkit-border-top-left-radius:3px;-moz-border-radius-topleft:3px;border-top-left-radius:3px}h1.about a{color:#fff !important}
 		**/
-		html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}/* HTML5 display-role reset for older browsers */article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}body {line-height: 1;}ol, ul {list-style: none;}blockquote, q {quotes: none;}blockquote:before, blockquote:after,q:before, q:after {content: '';content: none;}table {border-collapse: collapse;border-spacing: 0;}html {}
-		body{font-family:arial; font-size:12px;}
-		*{overflow:hidden;}
-		#canvas {}
-		#controls{
-			position:absolute; top:0; left:0; padding:20px;
-			-webkit-border-bottom-right-radius: 3px;
-			-moz-border-radius-bottomright: 3px;
-			border-bottom-right-radius: 3px;
-			background-image:url('http://afs35mm.com/background.png');
-		}
-		p{
-			color:white; 
-			padding:10px 2px;
-			font-weight:600;
-		}
-		p#disclaimer{
-			font-family:georgia; 
-			font-style:italic; 
-			text-align:center; 
-			margin-top:10px;
-			font-weight:200;
-		}
-		input[type='range'] {
-			-webkit-appearance: none;
-			background-color: #000;
-			height:20px;
-			-webkit-border-radius: 2px;
-			-moz-border-radius: 2px;
-			border-radius: 2px;	
-			color:#fff;
-		}
-		input[type='range']::-webkit-slider-thumb {
-			color:#fff;
-			-webkit-appearance: none;
-			background-color: #11f1ff;
-			width: 6px;
-			height: 20px;
-			-webkit-border-radius: 2px;
-			-moz-border-radius: 2px;
-			border-radius: 2px;	
-			background: #1e5799; /* Old browsers */
-			background: -moz-linear-gradient(top, #1e5799 0%, #11f1ff 100%); /* FF3.6+ */
-			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(100%,#11f1ff)); /* Chrome,Safari4+ */
-			background: -webkit-linear-gradient(top, #1e5799 0%,#11f1ff 100%); /* Chrome10+,Safari5.1+ */
-			background: -o-linear-gradient(top, #1e5799 0%,#11f1ff 100%); /* Opera 11.10+ */
-			background: -ms-linear-gradient(top, #1e5799 0%,#11f1ff 100%); /* IE10+ */
-			background: linear-gradient(to bottom, #1e5799 0%,#11f1ff 100%); /* W3C */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#11f1ff',GradientType=0 ); /* IE6-9 */
-		}
-		h1.about {
-			position:absolute; 
-			right:0; 
-			bottom:0; 
-			padding:10px;
-			background-image:url('http://afs35mm.com/background.png');
-			color:white;
-			-webkit-border-top-left-radius: 3px;
-			-moz-border-radius-topleft: 3px;
-			border-top-left-radius: 3px;
-		}
-		h1.about a {
-			color:#fff !important;
-		}
+		
 	</style>
     </head>
 
@@ -121,106 +59,9 @@
 	
 	</div>
 	<h1 class="about">By <a target="_blank" href="https://twitter.com/afs35mm">@AFS35MM</a></h1>
-	<script>
-	var Fireworks = Fireworks || {};
-
-	Fireworks.App = (function(){
-
-		//Global variables
-		var canvas = document.getElementById("canvas");
-		var ctx = canvas.getContext("2d");
-		
-
-		var bindDomEvents = function(){
-			canvas.addEventListener("click", startdraw, false);
-			document.getElementById('ballSpeed').onchange = function() {
-				config.speedOfBall = this.value;
-			};
-			document.getElementById('scale').onchange = function() {
-				config.ballCount = this.value;
-			};
-			document.getElementById('particlesize').onchange = function() {
-				config.sizeOfParticles = this.value;
-			};
-		};
-
-		var setUpCanvas = function(){
-			canvas.width = config.W;
-			canvas.height = config.H;
-			ctx.fillStyle = "black";
-			ctx.fillRect(0, 0, config.W, config.H);
-		};
-
-		//ball constructor
-		var ball = function (positionx,positiony){    
-            this.r = Math.round(Math.random()*255);
-            this.g = Math.round(Math.random()*255);
-            this.b = Math.round(Math.random()*255);
-            this.a = Math.random();
-            this.location = {
-                x: positionx,
-                y:positiony
-            }
-            this.speed = {
-                x: (-2+Math.random()*4)*config.speedOfBall, 
-                y: (-2+Math.random()*4)*config.speedOfBall
-            };
-        };
-        //move them balls
-        var draw = function (){
-            ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
-            ctx.fillRect(0, 0, config.W, config.H);    
-            for(var i = 0; i < config.balls.length; i++){
-                var p = config.balls[i];
-                ctx.beginPath();
-                ctx.arc(p.location.x, p.location.y, config.sizeOfParticles, Math.PI*2, false);
-                ctx.fillStyle = "rgba("+p.r+","+p.g+","+p.b+", "+p.a+")";
-                
-                ctx.fill();    
-                var consolelogX = p.location.x;
-                var consolelogY = p.location.y;
-                p.location.x += p.speed.x;    
-                p.location.y += p.speed.y;
-            }
-        }
-
-        //kicks off the balls
-		var startdraw = function (e){
-            var posX = e.pageX;    
-            var posY = e.pageY;   
-            console.log(posX,posY)  ;
-            for(i=0;i<config.ballCount;i++){
-                config.balls.push(new ball(posX,posY));
-            }
-        };
-		var config = {
-			W: window.innerWidth,
-			H: window.innerHeight,
-			balls: [],
-			speedOfBall: document.getElementById('ballSpeed').value,
-			ballCount: document.getElementById('scale').value,
-			sizeOfParticles: document.getElementById('particlesize').value,
-		};
-
-		var init = function(){
-			setUpCanvas();
-			bindDomEvents();
-			setInterval(draw,20);
-			//draw();
-		};
-		return {
-			init: init
-		};
-
-	})();
-
-	window.onload = function(){
-		Fireworks.App.init();
-		//console.log(canvas);
-	};
 
 
-	</script>
+	<script src="main.js"></script>
 	<!-- Google Analytics -->
   <script type="text/javascript">
 
